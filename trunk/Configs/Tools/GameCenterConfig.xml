@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GameCenterConfig>
+  <!--登录用户名-->
+  <UserName>1</UserName>
+  <!--登录密码-->
+  <Password>1</Password>
+    <!--公司Logo位置-->
+  <IconPath>Resources\LogoImage.png</IconPath>
+
+  <!--切换屏幕的时间-->
+  <ChangeScreenTime>10</ChangeScreenTime>
+
+  <!--是否全屏-->
+  <SetFullScreen>0</SetFullScreen>
+
+  <!--使用刷卡机配置-->
+  <UseCoin>0</UseCoin>
+  <!--测试模式-->
+  <IsTest>1</IsTest>
+
+  <!--是否第一台主机必须启动-->
+  <MustHostStart>0</MustHostStart>
+
+  <!--开始游戏后多少时间插入数据 单位秒-->
+  <InSertDBTime>30</InSertDBTime>
+
+  <!--投币器使用端口号字符串-->
+  <CoinComPort>Prolific USB-to-Serial Comm Port</CoinComPort>
+
+</GameCenterConfig>
+

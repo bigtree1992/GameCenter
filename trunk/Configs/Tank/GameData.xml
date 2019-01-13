@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+  <GameInfo>
+    <Name>tank</Name>
+    <Icon>Resources/Tank1-4/Icon.jpg</Icon>
+    <Detail>这是Tank关卡一的详细信息</Detail>
+    <Path>Games\Tank1_4\tank.exe</Path>
+    <GameConfigPath>Games\Tank1_4\tank_Data\StreamingAssets\TankConfig.config</GameConfigPath>
+    <SinglePrice>1</SinglePrice>
+    <!--是否支持游戏启动后删除边框-->
+    <IsDeleteBorder>1</IsDeleteBorder>
+    <!--是否支持关闭游戏后关闭马机-->
+	<IsKillCloseGa>0</IsKillCloseGa>
+
+    <KeyValuePair>
+    	<Key>PlayerNum</Key>
+    	<Value>(PlayerNum)</Value>
+    </KeyValuePair>
+  </GameInfo>
+
+
+  <GameInfo>
+    <Name>tank</Name>
+    <Icon>Resources/Tank2-4/Icon.jpg</Icon>
+    <Detail>这是Tank关卡二的详细信息</Detail>
+    <Path>Games\Tank2_4\tank.exe</Path>
+    <GameConfigPath>Games\Tank2_4\tank_Data\StreamingAssets\TankConfig2.config</GameConfigPath>
+    <SinglePrice>2</SinglePrice>
+    <!--是否支持游戏启动后删除边框-->
+    <IsDeleteBorder>1</IsDeleteBorder>
+     <!--是否支持关闭游戏后关闭马机-->
+	<IsKillCloseGa>0</IsKillCloseGa>
+	<KeyValuePair>
+        <Key>PlayerNum</Key>
+        <Value>(PlayerNum)</Value>
+    </KeyValuePair>
+  </GameInfo>
+
+</GameData>

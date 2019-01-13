@@ -1,0 +1,1 @@
+Please use main menu -> "Tools"->"Hardware ID Tool - Generator" to create HID.exe. 

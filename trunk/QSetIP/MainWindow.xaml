@@ -1,0 +1,17 @@
+﻿<Window x:Class="QSetIP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QSetIP"
+        mc:Ignorable="d"
+        Title="奇境森林IP设置工具" Height="225.891" Width="391.027" ResizeMode="NoResize">
+    <Grid>
+
+        <ComboBox x:Name="IPComboBox" HorizontalAlignment="Left" Margin="139,23,0,0" VerticalAlignment="Top" Width="210"
+                  DisplayMemberPath="IPAddress" SelectedValuePath="ID" Height="38" FontSize="24"/>
+        <TextBlock x:Name="textBlock" FontSize="24" HorizontalAlignment="Left" Margin="18,23,0,0" TextWrapping="Wrap" Text="请选择IP : " VerticalAlignment="Top" Height="30" Width="116"/>
+        <Button x:Name="OK" Content="确定" HorizontalAlignment="Left" Margin="114,110,0,0" VerticalAlignment="Top" Width="161" Click="OnOKClick" Height="45" FontSize="24"/>
+
+    </Grid>
+</Window>

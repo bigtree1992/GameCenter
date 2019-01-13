@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+  <GameInfo>
+    <ID>1</ID>
+    <Name>Test</Name>
+    <Path>VRKart_Copy\Test.exe</Path>
+    <GameConfigPath>VRKart_Copy\VRcar\Config\GameConfig.xml</GameConfigPath>
+  </GameInfo>
+
+
+  <GameInfo>
+    <ID>2</ID>
+    <Name>Test</Name>
+    <Path>VRKart_Copy\Test.exe</Path>
+    <GameConfigPath>VRKart_Copy\VRcar\Config\GameConfig.xml</GameConfigPath>
+  </GameInfo>
+
+</GameData>

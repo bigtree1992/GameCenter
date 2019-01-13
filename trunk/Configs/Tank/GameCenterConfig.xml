@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameCenterConfig>
+  <!--登录用户名-->
+  <UserName>1</UserName>
+  <!--登录密码-->
+  <Password>1</Password>
+  <!--公司Logo位置-->
+  <IconPath>Resources\LogoImage.png</IconPath>
+  <!--公司Logo位置-->
+  <WechatIcon>Resources\WechatImage.jpg</WechatIcon>
+   <!--鼠标样式的相对地址-->
+  <CursorPath></CursorPath>
+  <!--使用刷卡机配置-->
+  <UseCoin>1</UseCoin>
+  <!--测试模式-->
+  <IsTest>0</IsTest>
+  <!--是否设置全屏-->
+  <SetFullScreen>1</SetFullScreen>
+  <!--开始游戏后多少时间插入数据 单位秒-->
+  <InSertDBTime>30</InSertDBTime>
+
+  <!--投币器使用端口号字符串-->
+  <CoinComPort>Prolific USB-to-Serial Comm Port</CoinComPort>
+
+</GameCenterConfig>
+

@@ -1,0 +1,122 @@
+﻿<Window x:Class="QGameCenterLogic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QGameCenterLogic"
+        mc:Ignorable="d"
+        Title="QGameCenter" Height="540" Width="960"  Loaded="OnLoadWindow" Closed="OnWindowClosed" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+
+        <Style x:Key="ButtonStyle1" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Transparent"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent" CornerRadius="3">
+                                <Grid Background="{TemplateBinding Background}" Margin="1">
+                                    <Border x:Name="BackgroundAnimation" Background="Transparent" Opacity="0"/>
+                                    <Rectangle x:Name="BackgroundGradient">
+                                        <Rectangle.Fill>
+                                            <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                                <GradientStop Color="Transparent" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="0.375"/>
+                                                <GradientStop Color="Transparent" Offset="0.625"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Rectangle x:Name="DisabledVisualElement" Fill="Transparent" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3"/>
+                            <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" Stroke="Transparent" StrokeThickness="1"/>
+                        </Grid>
+                        <!--触发器-->
+                        <ControlTemplate.Triggers>
+                            <!--鼠标移入移出-->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            <!--按钮按下弹起-->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Foreground" Value="Yellow"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="False">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Menu DockPanel.Dock="Top" VerticalAlignment="Top"/>
+            <Viewbox Stretch="Fill">
+                <Canvas x:Name="ParentCanvas" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="1920" Height="1080">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Resources/Image/BG.png"/>
+                    </Canvas.Background>
+
+                    <Image Source="Resources/Image/test22.png" Visibility="Visible" Name="adverts" Stretch="Fill" Canvas.Left="119" Canvas.Top="271" Height="732" Width="1083"></Image>
+                    <Image Source="Resources/Image/Border01.png" Stretch="Fill" Canvas.Left="90" Canvas.Top="182" Height="852" Width="1133"></Image>
+
+                    <Image Source="Resources/Image/next_Normal.png" Stretch="Fill" Canvas.Left="689" Canvas.Top="857" Height="104" Width="93"></Image>
+                    <Image Source="Resources/Image/previous_Normal.png" Stretch="Fill" Canvas.Left="445" Canvas.Top="857" Height="104" Width="93"></Image>
+                    <Button Name="Previous" Canvas.Left="452" Canvas.Top="863" Width="84" Height="79" Style="{StaticResource ButtonStyle1}" />
+                    <Button Name="Next" Canvas.Left="695" Canvas.Top="863" Width="84" Height="79" Style="{StaticResource ButtonStyle1}" />
+
+                    <Image Source="Resources/Image/Car1_Yellow.png" Name="Car1" Stretch="Fill" Canvas.Left="1398" Canvas.Top="476" Height="66" Width="168"></Image>
+                    <Image Source="Resources/Image/Car2_Violet.png" Name="Car2" Stretch="Fill" Canvas.Left="1594" Canvas.Top="476" Height="66" Width="168"></Image>
+                    <Image Source="Resources/Image/Car3_Violet.png" Name="Car3" Stretch="Fill" Canvas.Left="1398" Canvas.Top="593" Height="63" Width="161"></Image>
+                    <Image Source="Resources/Image/Car4_Violet.png" Name="Car4" Stretch="Fill" Canvas.Left="1594" Canvas.Top="602" Height="66" Width="168"></Image>
+                    <Button Name="CarButton1" Canvas.Left="1382" Canvas.Top="484" Width="173" Height="49" Style="{StaticResource ButtonStyle1}" />
+                    <Button x:Name="CarButton2" Canvas.Left="1592" Canvas.Top="482" Width="173" Height="49" Style="{StaticResource ButtonStyle1}" />
+                    <Button x:Name="CarButton3" Canvas.Left="1399" Canvas.Top="602" Width="173" Height="49" Style="{StaticResource ButtonStyle1}" />
+                    <Button x:Name="CarButton4" Canvas.Left="1598" Canvas.Top="608" Width="173" Height="49" Style="{StaticResource ButtonStyle1}" />
+
+                    <Image Source="Resources/Image/CreateRoom_Normal.png" Stretch="Fill" Canvas.Left="1366" Canvas.Top="250" Height="138" Width="389"></Image>
+                    <Image Source="Resources/Image/JoinRoom_Normal.png" Stretch="Fill" Canvas.Left="1366" Canvas.Top="826" Height="138" Width="389"></Image>
+                    <Button x:Name="CreateRoom" Canvas.Left="1440" Canvas.Top="250" Width="283" Height="86" Style="{StaticResource ButtonStyle1}" />
+                    <Button x:Name="JoinRoom" Canvas.Left="1365" Canvas.Top="817" Width="398" Height="128" Style="{StaticResource ButtonStyle1}" />
+
+                    <Button x:Name="Close" Canvas.Left="1759" Click="OnExitButtonClick" Canvas.Top="23" Width="117" Height="88" Style="{StaticResource ButtonStyle1}" />
+
+
+                </Canvas>
+            </Viewbox>
+            <StatusBar DockPanel.Dock="Bottom" Height="20" VerticalAlignment="Bottom"/>
+        </DockPanel>
+    </Grid>
+
+</Window>

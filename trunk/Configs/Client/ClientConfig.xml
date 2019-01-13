@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<QClientConfig>
+  <!--接受数据最大的Size-->
+  <ReceiveBufferSize>8192</ReceiveBufferSize>
+  <!--解析发送数据最大的Size-->
+  <DecodeBufferSize>8192</DecodeBufferSize>
+  <!--超时设置-->
+  <ClientTimeout>20</ClientTimeout>
+  <!--客户端接收广播端口号-->
+  <Port>5940</Port>
+  <!--同屏端口号-->
+  <ScreenPort>4939</ScreenPort>
+  <!--传输文件端口号-->
+  <FilePort>6939</FilePort>
+  <!--同屏传输的频率-->
+  <Frequency>33</Frequency>
+  <WindowLocationLeft>1000</WindowLocationLeft>
+  <WindowLocationTop>50</WindowLocationTop>
+
+  <!--是否移动游戏窗口-->
+  <IsMoveGame>1</IsMoveGame>
+  <Top>152</Top>
+  <Left>350</Left>
+  <Height>675</Height>
+  <Width>1200</Width>
+
+  <Version>1.0</Version>
+</QClientConfig>

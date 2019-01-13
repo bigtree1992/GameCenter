@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+  <GameInfo>
+    <Name>FightCard</Name>
+    <Icon>Resources/FightCard/Icon.jpg</Icon>
+    <Detail>这是VR战棋（卡牌对战）的详细信息</Detail>
+    <Path>Games\FightCard\FightCard.exe</Path>
+    <GameConfigPath>Games\FightCard\FightCard_Data\StreamingAssets\GameConfig.xml</GameConfigPath>
+    <SinglePrice>1</SinglePrice>
+    <!--是否支持游戏启动后删除边框-->
+    <IsDeleteBorder>1</IsDeleteBorder>
+    <!--是否支持关系游戏后关闭马机-->
+	<IsKillCloseGa>0</IsKillCloseGa>
+
+    <KeyValuePair>
+    	<Key>NetworkAddress</Key>
+    	<Value>(NetworkAddress)</Value>
+    </KeyValuePair>
+    <KeyValuePair>
+    	<Key>SeverPlayerID</Key>
+    	<Value>(SeverPlayerId)</Value>
+    </KeyValuePair>
+  </GameInfo>
+</GameData>

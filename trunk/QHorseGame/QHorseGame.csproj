@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B8CB704-D810-4073-A692-E1BCB5A05E12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QGameCenterLogic</RootNamespace>
+    <AssemblyName>QHorseCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>horse.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.106.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.106.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CoinOperation.xaml.cs">
+      <DependentUpon>CoinOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPanel.xaml.cs">
+      <DependentUpon>SettingPanel.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CoinOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Message.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OperatedCoinPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OperatedCoinPanel.xaml.cs">
+      <DependentUpon>OperatedCoinPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logo\newlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\commomIcon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\DisConnectBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\frame2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\mengban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\CoinPanelBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QConnection\QConnection.csproj">
+      <Project>{4f98fd80-faa4-4f65-bf72-abbc9eed7365}</Project>
+      <Name>QConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QData\QData.csproj">
+      <Project>{723dd43f-a72a-4e1a-a1e8-7c5c727239cf}</Project>
+      <Name>QData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QGameCenterLogic\QGameCenterLogic.csproj">
+      <Project>{009c2a0d-3cc4-42df-bb59-1888b3276efd}</Project>
+      <Name>QGameCenterLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\StartGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\EndGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\condensedselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\fullselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\clienter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\reclienter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\restarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\starter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\vr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\ConnectBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logo\LogoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="horse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\CoinMessageBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\ok.png" />
+    <Resource Include="Resources\Game\oktouch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Game\yellow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>IF NOT EXIST $(ProjectDir)$(OutDir)\Configs MD $(ProjectDir)$(OutDir)\Configs
+IF NOT EXIST $(ProjectDir)$(OutDir)\Data MD $(ProjectDir)$(OutDir)\Data
+IF NOT EXIST $(ProjectDir)$(OutDir)\Resources MD $(ProjectDir)$(OutDir)\Resources
+IF NOT EXIST $(ProjectDir)$(OutDir)\Version MD $(ProjectDir)$(OutDir)\Version
+IF NOT EXIST $(ProjectDir)$(OutDir)\Version\ClientVersion MD $(ProjectDir)$(OutDir)\Version\ClientVersion
+IF NOT EXIST $(ProjectDir)$(OutDir)\Version\GamesVersion MD $(ProjectDir)$(OutDir)\Version\GamesVersion
+IF NOT EXIST $(ProjectDir)$(OutDir)\Version\MachineToolsVersion MD $(ProjectDir)$(OutDir)\Version\MachineToolsVersion
+copy $(ProjectDir)..\Configs\Horse\ServerConfig.xml $(ProjectDir)$(OutDir)\Configs
+copy $(ProjectDir)..\Configs\Horse\ClientData.xml $(ProjectDir)$(OutDir)\Configs
+copy $(ProjectDir)..\Configs\Horse\GameData.xml $(ProjectDir)$(OutDir)\Configs
+copy $(ProjectDir)..\Configs\Horse\GameCenterConfig.xml $(ProjectDir)$(OutDir)\Configs
+copy $(ProjectDir)..\DateBase\GameCenterDB.db $(ProjectDir)$(OutDir)\Data
+copy $(ProjectDir)..\Configs\Horse\IPInfoConfig.xml $(ProjectDir)$(OutDir)\Configs
+xcopy $(ProjectDir)..\Resources\SuperHorse\*.* $(ProjectDir)$(OutDir)\Resources/s/h/d/y</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F98FD80-FAA4-4F65-BF72-ABBC9EED7365}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QConnection</RootNamespace>
+    <AssemblyName>QConnection</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lemony.SystemInfo">
+      <HintPath>..\Dll\Lemony.SystemInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoinOperation\CoinDetection.cs" />
+    <Compile Include="QConnection\BitmapCursor.cs" />
+    <Compile Include="QConnection\ClientEvent.cs" />
+    <Compile Include="QConnection\Error.cs" />
+    <Compile Include="QConnection\IPBroadcaster.cs" />
+    <Compile Include="QConnection\IPBroadcastReceiver.cs" />
+    <Compile Include="QConnection\ProtocolCenter.cs" />
+    <Compile Include="QConnection\Log.cs" />
+    <Compile Include="QConnection\ProtocolTable.cs" />
+    <Compile Include="QConnection\QClientBase.cs" />
+    <Compile Include="QConnection\QClientConfig.cs" />
+    <Compile Include="QConnection\QConnBase.cs" />
+    <Compile Include="QConnection\QServerConfig.cs" />
+    <Compile Include="QConnection\ReceiveEventArgs.cs" />
+    <Compile Include="QConnection\SocketEventPool.cs" />
+    <Compile Include="QConnection\BufferManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QConnection\QServerBase.cs" />
+    <Compile Include="QConnection\ClientManager.cs" />
+    <Compile Include="QConnection\Utils.cs" />
+    <Compile Include="QConnection\SendEventArgs.cs" />
+    <Compile Include="QFile\QFileClient.cs" />
+    <Compile Include="QFile\QFileServer.cs" />
+    <Compile Include="QNetInfo\QNetInfoClient.cs" />
+    <Compile Include="QNetInfo\QNetInfoServer.cs" />
+    <Compile Include="QScreen\QRDPScreenClient.cs" />
+    <Compile Include="QScreen\QRDPScreenServer.cs" />
+    <Compile Include="QScreen\QScreenClient.cs" />
+    <Compile Include="QScreen\QScreenServer.cs" />
+    <Compile Include="QConnection\Win32API.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QProtocols\QProtocols.csproj">
+      <Project>{204e0a6b-d029-4115-81da-7d63fb230e54}</Project>
+      <Name>QProtocols</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="RDPCOMAPILib">
+      <Guid>{CC802D05-AE07-4C15-B496-DB9D22AA0A84}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

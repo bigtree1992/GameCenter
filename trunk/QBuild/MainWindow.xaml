@@ -1,0 +1,24 @@
+﻿<Window x:Class="QBuild.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QBuild"
+        mc:Ignorable="d"
+        Title="中控打包工具" Height="469.735" Width="460.217" Closed="OnWindowClose" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Menu DockPanel.Dock="Top" VerticalAlignment="Top"></Menu>
+            <Viewbox Stretch="Fill">
+                <Canvas HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="525" Height="380">
+                    <Button Name="horse" Content="马战中控打包" Canvas.Left="97" Canvas.Top="20" Width="329" Height="42" FontSize="20" Click="HorseWarriorClick"/>
+                    <Button Name="tank" Content="横版坦克中控打包" Canvas.Left="93" Canvas.Top="111" Width="329" Height="42" FontSize="20" Click="OnHTankButtonClick" />
+                    <Button Name="bte" Content="竖版坦克中控打包" Canvas.Left="93" Canvas.Top="211" Width="329" Height="42" FontSize="20" Click="OnVTankButtonClick" />
+                    <Button x:Name="vrkart" Content="VRKart中控打包" Canvas.Left="93" Canvas.Top="299" Width="329" Height="42" FontSize="20" Click="OnVRKartButtonClick" />
+
+                </Canvas>
+            </Viewbox>
+            <StatusBar DockPanel.Dock="Bottom" Height="20" VerticalAlignment="Bottom"></StatusBar>
+        </DockPanel>
+    </Grid>
+</Window>

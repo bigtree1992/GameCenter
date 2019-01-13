@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+  <GameInfo>
+    <Name>SuperHorse</Name>
+    <Icon>Resources/SuperHorse/Icon.jpg</Icon>
+    <Detail>这是三英占吕布版本一的详细信息</Detail>
+    <Path>Games\SuperHorseFull\SuperHorse.exe</Path>
+    <GameConfigPath>Games\SuperHorseFull\SuperHorse_Data\StreamingAssets\GameConfig.xml</GameConfigPath>
+    <SinglePrice>1</SinglePrice>
+    <!--是否支持游戏启动后删除边框-->
+    <IsDeleteBorder>1</IsDeleteBorder>
+    <!--是否支持关系游戏后关闭马机-->
+	<IsKillCloseGa>1</IsKillCloseGa>
+
+    <KeyValuePair>
+    	<Key>TotalPlayerCount</Key>
+    	<Value>(PlayerNum)</Value>
+    </KeyValuePair>
+    <KeyValuePair>
+    	<Key>NetworkAddress</Key>
+    	<Value>(NetworkAddress)</Value>
+    </KeyValuePair>
+    <KeyValuePair>
+    	<Key>SeverPlayerId</Key>
+    	<Value>(SeverPlayerId)</Value>
+    </KeyValuePair>
+  </GameInfo>
+
+
+  <GameInfo>
+    <Name>SuperHorse</Name>
+    <Icon>Resources/SuperHorse/Icon.jpg</Icon>
+    <Detail>这是三英占吕布版本二详细信息</Detail>
+    <Path>Games\SuperHorseCondensed\SuperHorse.exe</Path>
+    <GameConfigPath>Games\SuperHorseCondensed\SuperHorse_Data\StreamingAssets\GameConfig.xml</GameConfigPath>
+    <SinglePrice>2</SinglePrice>
+    <!--是否支持游戏启动后删除边框-->
+    <IsDeleteBorder>1</IsDeleteBorder>
+     <!--是否支持关系游戏后关闭马机-->
+	<IsKillCloseGa>1</IsKillCloseGa>
+	<KeyValuePair>
+        <Key>TotalPlayerCount</Key>
+        <Value>(PlayerNum)</Value>
+    </KeyValuePair>
+    <KeyValuePair>
+        <Key>NetworkAddress</Key>
+        <Value>(NetworkAddress)</Value>
+    </KeyValuePair>
+    <KeyValuePair>
+        <Key>SeverPlayerId</Key>
+        <Value>(SeverPlayerId)</Value>
+    </KeyValuePair>
+
+  </GameInfo>
+</GameData>

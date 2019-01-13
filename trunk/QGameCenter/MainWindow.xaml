@@ -1,0 +1,49 @@
+﻿<Window x:Class="QGameCenter.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="奇境森林远程命令控制" Height="602.062" Width="916.648" Closed="OnWindowCloed">
+    <Grid>
+        <TabControl x:Name="MainTab" SelectionChanged="OnMainTab_SelectionChanged">
+            <TabItem Header="机器列表">
+                <DataGrid x:Name="dataGrid" Margin="-2,0" ItemsSource="{Binding}" CanUserAddRows="False" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Column="1"
+                                AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"
+                                            Width="60" IsReadOnly="true" 
+                                            Binding="{Binding ID}" />
+                        <DataGridTextColumn Header="客户机器"
+                                            Width="260" IsReadOnly="true" 
+                                            Binding="{Binding Machine}" />
+                        <DataGridTextColumn Header="客户IP"
+                                            Width="260" IsReadOnly="true" 
+                                            Binding="{Binding IP}" />
+                        <DataGridTextColumn Header="详细信息"
+                                            Width="*" IsReadOnly="true" 
+                                            Binding="{Binding Info}" />
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="命令控制">
+                <Grid Margin="10,0,-10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="当前机器：" HorizontalAlignment="Left" Margin="17,12,0,8" Width="72" Height ="30" Grid.Row="0" />
+                    <TextBlock x:Name="Machine" Text="无机器" HorizontalAlignment="Left" Margin="89,18,0,2"  Width="136" Height ="30" Grid.Row="0"/>
+                    <TextBlock x:Name="Info" Text="" HorizontalAlignment="Left" Width="400" Height ="30" Margin="243,15,0,0"  Grid.Row="0"/>
+                    <TextBox x:Name="Command" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,95,10" Foreground="Black" FontFamily="Lucida Console" Background="#FFEAEAEA"  Grid.Row="1" FontSize="14"/>
+                    <Button x:Name="SendBtn" Content="发送" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10" Height="60" Width="75" Background="{x:Null}"   Grid.Row="1"/>
+                    <TextBox x:Name="ResultContent" IsReadOnly="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Foreground="Black" FontFamily="Lucida Console" Background="#FFEAEAEA" Grid.Row="2" VerticalScrollBarVisibility="Auto" FontSize="14"/>
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+    </Grid>
+</Window>

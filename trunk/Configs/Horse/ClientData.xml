@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ClientData>
+  <ClientInfo>
+    <IP>192.168.15.101</IP>
+    <ID>1</ID>
+  </ClientInfo>
+ <ClientInfo>
+    <IP>192.168.15.102</IP>
+    <ID>2</ID>
+  </ClientInfo>
+  <ClientInfo>
+    <IP>192.168.15.103</IP>
+    <ID>3</ID>
+  </ClientInfo>
+</ClientData>

@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="QGameCenterLogic.SettingPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QGameCenterLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="990" d:DesignWidth="551">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Transparent"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent" CornerRadius="3">
+                                <Grid Background="{TemplateBinding Background}" Margin="1">
+                                    <Border x:Name="BackgroundAnimation" Background="Transparent" Opacity="0"/>
+                                    <Rectangle x:Name="BackgroundGradient">
+                                        <Rectangle.Fill>
+                                            <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                                <GradientStop Color="Transparent" Offset="0"/>
+                                                <GradientStop Color="Transparent" Offset="0.375"/>
+                                                <GradientStop Color="Transparent" Offset="0.625"/>
+                                                <GradientStop Color="Transparent" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Rectangle x:Name="DisabledVisualElement" Fill="Transparent" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3"/>
+                            <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" Stroke="Transparent" StrokeThickness="1"/>
+                        </Grid>
+                        <!--触发器-->
+                        <ControlTemplate.Triggers>
+                            <!--鼠标移入移出-->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            <!--按钮按下弹起-->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Foreground" Value="Yellow"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="False">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <StackPanel Orientation="Horizontal">
+                            <Grid Height="25" Width="25">
+                                <Image x:Name="imageNoChecked" Source="Resources/Game/DisConnectBG.png" Height="25" Width="25" Margin="0,0,0,0" Stretch="Fill" RenderTransformOrigin="0.441,-0.1"/>
+                                <Image x:Name="imageChecked" Source="Resources/Game/ConnectBG.png" Height="25" Width="25" Margin="0,0,0,0" Stretch="Fill"/>
+                            </Grid>
+                            <Label Content="{TemplateBinding Content}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" />
+                        </StackPanel>
+                        <ControlTemplate.Triggers >
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="imageChecked" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="imageNoChecked" Property="Visibility" Value="Hidden" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="imageChecked" Property="Visibility" Value="Hidden" />
+                                <Setter TargetName="imageNoChecked" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </UserControl.Resources>
+    <Canvas Name="SettingPanel01" Panel.ZIndex="10">
+        <Image Source="Resources/Game/SettingBG.png" Canvas.Top="-3" Height="990" Width="551"/>
+        <Image Name="Icon" Source="Resources/Logo/LogoImage.png" Canvas.Left="175" Canvas.Top="305" Height="118" Width="206"></Image>
+        <Button Name="CloseGameCenterButton" Style="{StaticResource ButtonStyle1}" Content="关闭中控"  Canvas.Left="93" Canvas.Top="495" Width="164" Height="38" FontSize="15" Foreground="White"  >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="CloseClientsButton" Style="{StaticResource ButtonStyle1}" Content="关闭客户端"  Canvas.Left="293" Canvas.Top="495" Width="164" Height="38" FontSize="15" Foreground="White" >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="ResetGameCenterButton" Style="{StaticResource ButtonStyle1}" Content="重启中控"  Canvas.Left="93" Canvas.Top="555" Width="164" Height="38" FontSize="15" Foreground="White"  >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="ResetClientsButton" Style="{StaticResource ButtonStyle1}" Content="重启客户端"  Canvas.Left="293" Canvas.Top="555" Width="164" Height="38" FontSize="15" Foreground="White"  >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="ReturnButton" Style="{StaticResource ButtonStyle1}" Content="返回"  Canvas.Left="93" Canvas.Top="616" Width="164" Height="38" FontSize="15" Foreground="White"  >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="ResetSteamVR" Style="{StaticResource ButtonStyle1}" Content="重启SteamVR"  Canvas.Left="293" Canvas.Top="616" Width="164" Height="38" FontSize="15" Foreground="White"  >
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Game/buttonback.png"/>
+            </Button.Background>
+        </Button>
+
+        <Label x:Name="label01" Content="客户端01掉线" Canvas.Left="133" Canvas.Top="429" Foreground="#FF9C9393" Width="138"/>
+        <Label x:Name="label02" Content="客户端02掉线" Canvas.Left="326" Canvas.Top="429" Foreground="#FF9C9393" Width="138"/>
+        <Label x:Name="label03" Content="客户端03掉线" Canvas.Left="133" Canvas.Top="466" Foreground="#FF9C9393" Width="138"/>
+        <Label x:Name="label04" Content="客户端04掉线" Canvas.Left="326" Canvas.Top="464" Foreground="#FF9C9393" Width="138"/>
+
+        <CheckBox x:Name="checkBox1"   Canvas.Left="110" Canvas.Top="429" Width="27" IsEnabled="False"/>
+        <CheckBox x:Name="checkBox2"   Canvas.Left="298" Canvas.Top="429" Width="27" IsEnabled="False" />
+        <CheckBox x:Name="checkBox3"   Canvas.Left="110" Canvas.Top="463" Width="26" IsEnabled="False"/>
+        <CheckBox x:Name="checkBox4"   Canvas.Left="298" Canvas.Top="463" Width="24" IsEnabled="False"/>
+
+    </Canvas>
+</UserControl>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="QClientNS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QClientNS"
+        mc:Ignorable="d"
+        Title="QClient" Height="182" Width="703" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" 
+        Background="Transparent" WindowStartupLocation="Manual">
+    <Grid>
+        <Image Name="MainIcon" Source="Resources/Images/LogoImage.png" Margin="3,6,454,15"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="297,21,0,0" FontSize="18" TextWrapping="Wrap" TextAlignment="Right" Text="本地IP： " VerticalAlignment="Top" Height="23" Width="107" Foreground="#FFFFFCFC"/>
+
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="267,52,0,0" FontSize="18" TextWrapping="Wrap"  TextAlignment="Right" Text="本机机器码 ： " VerticalAlignment="Top" Height="23" Width="137" Foreground="#FFFFFCFC"/>
+        <TextBlock x:Name="MachineCodeTxt" Foreground="#FFFFFCFC" HorizontalAlignment="Left" Margin="414,52,0,0" FontSize="18" TextWrapping="Wrap" Text="本机机器码" VerticalAlignment="Top" Height="23" Width="221"/>
+
+        <TextBlock x:Name="LocalIP" Foreground="#FFFFFCFC" HorizontalAlignment="Left" Margin="414,21,0,0" FontSize="18" TextWrapping="Wrap" Text="192.168.0.1" VerticalAlignment="Top" Height="23" Width="221"/>
+        <TextBlock x:Name="textBlock_Copy" Foreground="#FFFFFCFC" HorizontalAlignment="Left" Margin="297,85,0,0" FontSize="18" TextWrapping="Wrap" TextAlignment="Right" Text="连接的IP ： " VerticalAlignment="Top" Height="23" Width="107"/>
+        <TextBlock x:Name="RemoteIP" HorizontalAlignment="Left" Foreground="#FFFFFCFC" Margin="414,85,0,0" FontSize="18" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="23" Width="221"/>
+
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Foreground="#FFFFFCFC" Margin="297,119,0,0" FontSize="18" TextWrapping="Wrap" TextAlignment="Right" Text="连接状态 ： " VerticalAlignment="Top" Height="23" Width="107"/>
+        <TextBlock x:Name="ConnectionStat" HorizontalAlignment="Left" Foreground="#FFFFFCFC" Margin="414,121,0,0" FontSize="18" TextWrapping="Wrap" Text="未连接" VerticalAlignment="Top" Height="23" Width="221"/>
+
+    </Grid>
+</Window>

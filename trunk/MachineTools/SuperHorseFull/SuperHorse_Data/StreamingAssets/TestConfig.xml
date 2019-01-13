@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestConfig>
+<!-- 箭雨Trigger的Z值-->
+  <ArrowCombTriggerPosZ>970</ArrowCombTriggerPosZ>
+<!-- 箭雨起始位置的X轴范围-->
+  <StartPos_xLen>12</StartPos_xLen>
+<!-- 箭雨起始速度-->
+  <ArrowStartSpeed>22</ArrowStartSpeed>
+<!-- 箭雨中间速度-->
+  <ArrowMiddelSpeed>15</ArrowMiddelSpeed>
+<!-- 箭雨结束速度-->
+  <ArrowEndSpeed>15</ArrowEndSpeed>
+<!-- 弓箭兵箭只的速度-->
+  <ArcherArrowSpeed>15</ArcherArrowSpeed>
+<!-- 陨石的初始力-->
+  <StoneStartForce>45</StoneStartForce>
+<!-- 触发武器挥舞音效的最小挥动距离-->
+  <WeaponWieldMinDistance>0.07</WeaponWieldMinDistance>
+<!-- 振幅-->
+  <Amplitude>500</Amplitude>
+  
+</TestConfig>

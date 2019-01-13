@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IPInfoConfig>
+<IPInfos>
+  <IPInfo>
+    <ID>1</ID>
+    <!--IP地址-->
+    <IPAddress>192.168.15.101</IPAddress>
+    <!--子网掩码-->
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <!--网关地址-->
+    <DefaultIPGateway>192.168.15.101</DefaultIPGateway>
+  </IPInfo>
+  <IPInfo>
+   <ID>2</ID>
+    <!--IP地址-->
+    <IPAddress>192.168.15.102</IPAddress>
+    <!--子网掩码-->
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <!--网关地址-->
+    <DefaultIPGateway>192.168.15.102</DefaultIPGateway>
+  </IPInfo>
+  <IPInfo>
+    <ID>3</ID>
+    <!--IP地址-->
+    <IPAddress>192.168.15.103</IPAddress>
+    <!--子网掩码-->
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <!--网关地址-->
+    <DefaultIPGateway>192.168.15.103</DefaultIPGateway>
+  </IPInfo>
+  <IPInfo>
+    <ID>4</ID>
+    <!--IP地址-->
+    <IPAddress>192.168.15.104</IPAddress>
+    <!--子网掩码-->
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <!--网关地址-->
+    <DefaultIPGateway>192.168.15.104</DefaultIPGateway>
+  </IPInfo>
+ 
+  <IPInfo>
+    <ID>5</ID>
+    <IPAddress>自动获取</IPAddress>
+    <!--子网掩码-->
+    <SubnetMask></SubnetMask>
+    <!--网关地址-->
+    <DefaultIPGateway></DefaultIPGateway>
+  </IPInfo>
+</IPInfos>  
+</IPInfoConfig>

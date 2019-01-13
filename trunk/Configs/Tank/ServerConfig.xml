@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<QServerConfig>
+  <MaxConnections>100</MaxConnections>
+  <ReceiveBufferSize>8192</ReceiveBufferSize>
+  <DecodeBufferSize>8192</DecodeBufferSize>
+  <ClientTimeout>20</ClientTimeout>
+  <Port>5939</Port>
+  <ScreenPort>4939</ScreenPort>
+  <FilePort>6939</FilePort>
+  <ChangeScreenTime>5</ChangeScreenTime>
+</QServerConfig>
+	
